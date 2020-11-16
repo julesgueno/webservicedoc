@@ -26,7 +26,7 @@
 
      touch Dockerfile
      vim Dockerfile
-
+*
      FROM
      MAINTAINER
      RUN mkdir -p "path of the Directory"
@@ -53,8 +53,7 @@
 
      touch "my-app.yml" 
      vim "my-app.yml"  
-
-
+*
 
      apiVersion: apps/v1 
      kind: Deployment
@@ -83,7 +82,7 @@
               ports:
               - containerPort: 
  
-    kubectl create -f "my-app.yml"
+    #kubectl create -f "my-app.yml"
 
 
 # 7- Create an Internal service
@@ -91,7 +90,7 @@
      touch "my-app-internal-service.yml"
      vim "my-app-internal-service.yml"
 
-******
+*
 
      apiVersion: v1
      kind: Service
@@ -112,7 +111,7 @@
             nodePort: 
     :wq
 
-****
+*
      kubectl create -f "my-app-internal-service.yml"
 
 
@@ -125,10 +124,11 @@
 
      #kubectl get all -n kubernetes-dashbord : To check all the pods and services created
 
-  
+*  
      touch "my-app-ingress.yml"
      vim "my-app-ingress.yml"
 
+*
     apiVersion: networking.k8s.io/v1beta1
     kind: Ingress
     metadata:
@@ -142,7 +142,8 @@
           - backend:
               serviceName: kubernetes-my-app
               servicePort: 
-
+     :wq
+*
      kubectl apply or create -f "my-app-ingress.yml"
 
 
