@@ -48,16 +48,16 @@
    touch "my-app.yml"
    vim "my-app.yml"
 
-   apiVersion: apps/v1 
-   kind: Deployment
-   metadata:
-   name: my-app
-   spec:
-   selector:
+    apiVersion: apps/v1 
+    kind: Deployment
+    metadata:
+    name: my-app
+    spec:
+    selector:
     matchLabels:
       app: my-app
-   replicas: 1 
-   strategy:
+    replicas: 1 
+    strategy:
     type: RollingUpdate
     rollingUpdate:
       maxSurge: 1
