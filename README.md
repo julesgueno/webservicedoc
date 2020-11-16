@@ -129,11 +129,13 @@
      #kubectl get all -n kubernetes-dashbord : To check all the pods and services created
 
 ** 
- 
+
      touch "my-app-ingress.yml"
      vim "my-app-ingress.yml"
 
 *
+
+
     apiVersion: networking.k8s.io/v1beta1
     kind: Ingress
     metadata:
@@ -148,7 +150,9 @@
               serviceName: kubernetes-my-app
               servicePort: 
      :wq
+
 *
+
      kubectl apply or create -f "my-app-ingress.yml"
 
 
