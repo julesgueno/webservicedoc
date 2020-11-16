@@ -26,7 +26,9 @@
 
      touch Dockerfile
      vim Dockerfile
-*
+**
+
+
      FROM
      MAINTAINER
      RUN mkdir -p "path of the Directory"
@@ -81,7 +83,8 @@
               imagePullPolicy: Always
               ports:
               - containerPort: 
- 
+     :wq
+`
     #kubectl create -f "my-app.yml"
 
 
@@ -112,7 +115,8 @@
     :wq
 
 *
-     kubectl create -f "my-app-internal-service.yml"
+
+     #kubectl create -f "my-app-internal-service.yml"
 
 
 # 8- Install your Ingress controller in minikube
@@ -124,7 +128,8 @@
 
      #kubectl get all -n kubernetes-dashbord : To check all the pods and services created
 
-*  
+** 
+ 
      touch "my-app-ingress.yml"
      vim "my-app-ingress.yml"
 
