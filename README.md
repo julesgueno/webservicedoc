@@ -4,7 +4,7 @@
 
 
 # 2- On  GitHub
-     Create a repository "myrepo"
+     Create a repository "myrepo" into your Git account
      Copy the code into "myrepo" using an editor
 
 
@@ -55,7 +55,9 @@
 
      touch "my-app.yml" 
      vim "my-app.yml"  
-*
+**
+
+
 
      apiVersion: apps/v1 
      kind: Deployment
@@ -92,8 +94,9 @@
    
      touch "my-app-internal-service.yml"
      vim "my-app-internal-service.yml"
+**
 
-*
+
 
      apiVersion: v1
      kind: Service
@@ -114,7 +117,8 @@
             nodePort: 
     :wq
 
-*
+**
+
 
      #kubectl create -f "my-app-internal-service.yml"
 
@@ -130,10 +134,11 @@
 
 ** 
 
+
      touch "my-app-ingress.yml"
      vim "my-app-ingress.yml"
 
-*
+**
 
 
     apiVersion: networking.k8s.io/v1beta1
@@ -151,7 +156,9 @@
               servicePort: 
      :wq
 
-*
+**
+
+
 
      kubectl apply or create -f "my-app-ingress.yml"
 
