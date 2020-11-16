@@ -3,29 +3,29 @@
 ## Run your code a make sure it's working
 
 
-## 2- On  GitHub
+# 2- On  GitHub
      Create a repository "myrepo"
      Copy the code into "myrepo" using an editor
 
 
-### 3- LINUX TERMINAL OR GITBASH
+# 3- LINUX TERMINAL OR GITBASH
 
-     `mkdir "myrepo"`
-     `cd "myrepo"`
-     `git init`
-     `git remote add origin "url ofyour new repository in github"`
-     `echo "#README" >> README.md`
-     `tar -czvf "name newfilecode.tar.gz oldfilecode`
-     `git status`
-     `git add .`
-     `git commit -m "New Code"`
-     `git push origin -u "branch name"`
+     mkdir "myrepo"
+     cd "myrepo"
+     git init
+     git remote add origin "url ofyour new repository in github"
+     echo "#README" >> README.md
+     tar -czvf "name newfilecode.tar.gz oldfilecode
+     git status
+     git add .
+     git commit -m "New Code"
+     git push origin -u "branch name"
 
 
-#### 4- Create a Dockerfile
+# 4- Create a Dockerfile
 
-     `touch Dockerfile`
-     `vim Dockerfile`
+     touch Dockerfile
+     vim Dockerfile
 
      FROM
      MAINTAINER
@@ -39,20 +39,20 @@
      :wq
 
 
-##### 5- Build and push your Images  Docker
+# 5- Build and push your Images  Docker
 
-     `docker login`
-     `docker build -t "nameofApp" .`
-     `docker images`
-     `docker push "ImagesID"`
+     docker login
+     docker build -t "nameofApp" .
+     docker images
+     docker push "ImagesID"
 
 **SETUP your Kubernetes Environment**
 
 
-###### 6- Create a yaml files for your pods deployment
+# 6- Create a yaml files for your pods deployment
 
-     `touch "my-app.yml" `
-     `vim "my-app.yml" ` 
+     touch "my-app.yml" 
+     vim "my-app.yml"  
 
 
 
@@ -88,9 +88,10 @@
 
 # 7- Create an Internal service
    
-     `touch "my-app-internal-service.yml"`
-     `vim "my-app-internal-service.yml"`
+     touch "my-app-internal-service.yml"
+     vim "my-app-internal-service.yml"
 
+******
 
      apiVersion: v1
      kind: Service
@@ -111,6 +112,7 @@
             nodePort: 
     :wq
 
+****
      kubectl create -f "my-app-internal-service.yml"
 
 
@@ -121,8 +123,8 @@
 
 # 9- Create an ingress roles to expose our deployment externally
 
-     kubectl get all -n kubernetes-dashbord 
-To check all the pods and services created
+     #kubectl get all -n kubernetes-dashbord : To check all the pods and services created
+
   
      touch "my-app-ingress.yml"
      vim "my-app-ingress.yml"
